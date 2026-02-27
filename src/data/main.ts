@@ -32,7 +32,7 @@ const stocks: Stock[] = [
 
 const reviews: Review[] = [
     {id: 1, productId: 1, rating: 4},
-    {id: 1, productId: 1, rating: 3}
+    {id: 1, productId: 1, rating: 5}
 ]
 
 const discounts: DiscountRule[] = [
