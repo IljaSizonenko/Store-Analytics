@@ -1,6 +1,7 @@
-export function formatRating(rating: number | null):  {
-    if (rating === null ) 
+export function formatRating(rating: number | null): string {
+    if (rating === null) {
         return"No reviews";
-    return '$rating.toFixed(2)';
+    }
+    return rating.toFixed(2);
 }
     

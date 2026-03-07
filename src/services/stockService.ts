@@ -1,4 +1,4 @@
-import { Stock } from "../models/Stock";
+import { Stock } from "../models/Stock.js";
 export type StockStatus = "Out of Stock" | "Low Stock" | "In Stock"
 
 export function getAvailable (productId: number, stocks: Stock[]): number {

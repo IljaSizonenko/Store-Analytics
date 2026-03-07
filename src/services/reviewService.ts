@@ -1,4 +1,4 @@
-import { Review } from "../models/Review";
+import { Review } from "../models/Review.js";
 
 export function getAverageRating(productId: number, reviews: Review[]): string {
     const productReviews = reviews.filter(

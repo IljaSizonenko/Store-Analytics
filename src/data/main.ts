@@ -1,9 +1,10 @@
-import { Product } from "../models/Product";
-import { Supplier } from "../models/Supplier";
-import { Category } from "../models/Category";
-import { Stock } from "../models/Stock";
-import { Review } from "../models/Review";
-import { DiscountRule } from "../models/DiscountRule";
+import { Product } from "../models/Product.js";
+import { Supplier } from "../models/Supplier.js";
+import { Category } from "../models/Category.js";
+import { Stock } from "../models/Stock.js";
+import { Review } from "../models/Review.js";
+import { DiscountRule } from "../models/DiscountRule.js";
+import { printReport } from "../ui/Ylesanne1.js";
 
 const suppliers: Supplier[] = [
     { id: 1, name: "Tech Supplies Inc.", contactEmail: "tech@supplies.com"},
@@ -32,9 +33,10 @@ const stocks: Stock[] = [
 
 const reviews: Review[] = [
     {id: 1, productId: 1, rating: 4},
-    {id: 1, productId: 1, rating: 5}
+    {id: 2, productId: 1, rating: 5}
 ]
 
 const discounts: DiscountRule[] = [
     {category: Category.Electronics, percent: 15, minRating: 4},
 ]
+printReport(products, suppliers, stocks, reviews, discounts)

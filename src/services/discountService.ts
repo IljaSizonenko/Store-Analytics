@@ -1,5 +1,5 @@
-import { Product } from "../models/Product";
-import { DiscountRule } from "../models/DiscountRule";
+import { Product } from "../models/Product.js";
+import { DiscountRule } from "../models/DiscountRule.js";
 
 export function getPrice (product: Product, averageRating: string, discontRules: DiscountRule[]): string {
     const basePrice = product.price;
