@@ -17,4 +17,4 @@ Kirjutatud dünaamiliselt.
 Kuidas käivitada:
 npx tsc - teeb kompileerimist kogu projekti
 node dist/data/main.js - käivitab konsoolirakendust
-index.html - veebirakendus
+Veebirakenduse link: https://iljasizonenko.github.io/Store-Analytics/
