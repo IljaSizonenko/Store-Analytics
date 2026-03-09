@@ -1,7 +1,7 @@
-import { Category } from "./Category";
+import { Category } from "./Category.js";
 
 export interface DiscountRule {
     category: Category;
     percent: number;
-    minRating: number;
+    minRating?: number;
 }

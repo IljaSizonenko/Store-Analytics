@@ -19,17 +19,31 @@ export function renderProducts(
         const nameEl = document.createElement("h3");
         nameEl.textContent = product.name;
         card.appendChild(nameEl);
+        const categoryEl = document.createElement("div")
+        categoryEl.className = "product-meta";
+        categoryEl.textContent = `Category: ${product.category}`;
+        card.appendChild(categoryEl);
         const priceEl =  document.createElement("div")
         const rating = getAverageRating(product.id, reviews);
         const finalPrice = getPrice(product, rating, discountRules);
         priceEl.textContent = `Price: ${finalPrice}`;
         card.appendChild(priceEl)
         const statusEl = document.createElement("div");
+        statusEl.className = "status";
         if (product.stock && product.stock.length > 0) {
             const status = getStockStatus(product.id, product.stock);
-            statusEl.textContent = `${status}`;
+            statusEl.textContent = status;
+            const normalized = status.toLowerCase().trim();
+            if (normalized === "in stock") {
+                statusEl.classList.add("in");
+            } else if (normalized === "low stock") {
+                statusEl.classList.add("low");
+            } else if (normalized === "out of stock") {
+                statusEl.classList.add("out");
+            }
         } else {
-            statusEl.textContent = "No stock data"
+            statusEl.textContent = "No stock data";
+            statusEl.classList.add("out")
         };
         card.appendChild(statusEl);
         if (product.stock && product.stock.length > 0) {
