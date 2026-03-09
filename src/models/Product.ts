@@ -1,5 +1,5 @@
 import type { Category } from "./Category";
-import type { Supplier } from "./Supplier";
+import type { Stock } from "./Stock";
 
 export interface Product {
     id: number;
@@ -8,4 +8,5 @@ export interface Product {
     category: Category;
     supplierId: number;
     specifications?: Record<string, string | number>;
+    stock?: Stock[]
 }

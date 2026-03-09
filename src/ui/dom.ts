@@ -64,6 +64,10 @@ export function CreateProductForm() {
     specsInput.type = "text";
     specsInput.placeholder = "Specifications";
     specsInput.id = "product-specs";
+    const stockInput = document.createElement("input")
+    stockInput.type = "text";
+    stockInput.placeholder = "Stock";
+    stockInput.id = "product-stock";
     const submitBtn = document.createElement("button")
     submitBtn.type = "submit";
     submitBtn.textContent = "Add product";
@@ -73,6 +77,7 @@ export function CreateProductForm() {
         categoryInput,
         supplierInput,
         specsInput,
+        stockInput,
         submitBtn
     );
     return form
